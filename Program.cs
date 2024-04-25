@@ -138,7 +138,10 @@ namespace Sparta_Dungeon_Game
                         VillageMenu();
                         break;
                     default:
+                        Console.WriteLine();
                         Console.WriteLine("잘못된 입력입니다.");
+                        Console.WriteLine();
+                        ShowStat();
                         break;
                 }
             }           
@@ -171,9 +174,11 @@ namespace Sparta_Dungeon_Game
                     case "0":
                         return;
                     default:
+                        Console.WriteLine();
                         Console.WriteLine("잘못된 입력입니다.");
+                        Console.WriteLine();
+                        ShowInventory();
                         break;
-
                 }
             }
 
@@ -201,8 +206,7 @@ namespace Sparta_Dungeon_Game
                 {
                     if (itemIndex == 0)
                     {
-                        ShowInventory();
-                        return;
+                        ShowInventory();                        
                     }
                     else if (itemIndex >= 1 && itemIndex <= inventory.Count)
                     {
@@ -265,8 +269,13 @@ namespace Sparta_Dungeon_Game
                     case "0":
                         return;
                     default:
+                        Console.WriteLine();
                         Console.WriteLine("잘못된 입력입니다.");
-                        break;
+                        Console.WriteLine();
+                        VisitShop();
+                        break;                        
+                        
+                       
 
                 }
             }
@@ -337,8 +346,7 @@ namespace Sparta_Dungeon_Game
                     }
                     else if (selectedIndex == 0)
                     {
-                        VisitShop();
-                        return;
+                        VisitShop();                        
                     }
                     else
                     {
@@ -382,8 +390,7 @@ namespace Sparta_Dungeon_Game
                 {
                     if (itemIndex == 0)
                     {
-                        VisitShop();
-                        return;
+                        VisitShop();                        
                     }
                     else if (itemIndex >= 1 && itemIndex <= inventory.Count)
                     {                        
@@ -408,6 +415,7 @@ namespace Sparta_Dungeon_Game
                 }
                 else
                 {
+                    Console.WriteLine();
                     Console.WriteLine("잘못된 입력입니다.");
                     Console.WriteLine();
                     SellItem();
