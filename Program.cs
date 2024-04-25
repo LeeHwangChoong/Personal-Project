@@ -10,7 +10,7 @@ namespace Sparta_Dungeon_Game
         private static int attack = 10;        
         private static int defense = 5;        
         private static int health = 100;
-        private static int gold = 1500;               
+        private static int gold = 1500;              
 
         private class Item
         {
@@ -62,11 +62,11 @@ namespace Sparta_Dungeon_Game
             new ShopItem("낡은 검", 2, 0, "쉽게 볼 수 있는 낡은 검 입니다.", 600),
             new ShopItem("청동 도끼", 5, 0, "어디선가 사용됐던거 같은 도끼입니다.", 1500),
             new ShopItem("스파르타의 창", 7, 0, "스파르타의 전사들이 사용했다는 전설의 창입니다.", 2000),
-            new ShopItem("황충의 활", 30, 0, "삼국지의 황충이 사용하던 활입니다.", 9000),
+            new ShopItem("청룡언월도", 20, 0, "관우가 사용하던 칼입니다.", 6000),
             new ShopItem("수련자 갑옷", 0, 5, "수련에 도움을 주는 갑옷입니다.", 1000),
             new ShopItem("무쇠갑옷", 0, 9, "무쇠로 만들어져 튼튼한 갑옷입니다.", 1500),
             new ShopItem("스파르타의 갑옷", 0, 15, "스파르타의 전사들이 사용했다는 전설의 갑옷입니다.", 3500),
-            new ShopItem("황충의 갑옷", 0, 25, "삼국지의 황충이 착용하던 갑옷입니다.", 8000)
+            new ShopItem("백은갑옷", 0, 20, "삼국지에서 군주들이 착용하던 갑옷입니다.", 5000)
 
         };
 
@@ -273,9 +273,7 @@ namespace Sparta_Dungeon_Game
                         Console.WriteLine("잘못된 입력입니다.");
                         Console.WriteLine();
                         VisitShop();
-                        break;                        
-                        
-                       
+                        break;                
 
                 }
             }
@@ -319,7 +317,7 @@ namespace Sparta_Dungeon_Game
                         if (Owned)
                         {
                             Console.WriteLine();
-                            Console.WriteLine("이미 구매한 아이템입니다.");
+                            Console.WriteLine("이미 보유중인 아이템입니다.");
                             Console.WriteLine();
                             BuyItem();
                         }
